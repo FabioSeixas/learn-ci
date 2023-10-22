@@ -8,12 +8,12 @@ on:
     branches:
       - main
 
-strategy:
-  matrix:
-    go: ['1.14', '1.15']
 
 jobs: 
   check-app:
+    strategy:
+      matrix:
+        go: ['1.14', '1.15']
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
